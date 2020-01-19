@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Music Player</title>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+		  integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+	<style>
+		#playlist li a {
+			color: inherit;
+			background-color: inherit;
+			cursor: default;
+			pointer-events: none;
+		}
+
+		#playlist li i {
+			cursor: pointer;
+			pointer-events: auto;
+		}
+
+		.progress span {
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+			color: dodgerblue;
+			font-weight: bold;
+			pointer-events: none;
+		}
+
+		.progress {
+			cursor: pointer;
+		}
+
+		.progress-bar {
+			transition: none;
+			will-change: width;
+		}
+	</style>
+
+	<script src="https://kit.fontawesome.com/e50bf0678a.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+<nav class="navbar navbar-light bg-dark mb-3">
+	<a class="navbar-brand text-white" href="#">
+		MPlayer
+	</a>
+</nav>
+
+<div class="container">
+	<audio id="player"></audio>
+
+	<ul id="playlist" class="list-group">
+		<li class="list-group-item d-flex">
+			<i id="backward" class="fas fa-backward mr-2"></i>
+			<i id="forward" class="fas fa-forward"></i>
+
+			<div class="d-flex ml-auto mr-2">
+				<span id="volume-percent" class="mr-2" style="line-height: 1"></span>
+				<div class="progress mr-2" style="width: 100px" title="Hangerő">
+					<div id="volume" class="progress-bar is-black"></div>
+				</div>
+				<i class="fas fa-volume-up"></i>
+			</div>
+
+			<i id="random" class="fas fa-random"></i>
+		</li>
+		<li class="list-group-item"><a href="./music/01 - Ranbu no Melody.mp3">Ranbu no Melody.mp3</a></li>
+		<li class="list-group-item"><a href="./music/01 - BLUE.mp3">BLUE.mp3</a></li>
+		<li class="list-group-item"><a href="./music/12 - Fade To Black_A04a.mp3">Fade To Black_A04a.mp3</a></li>
+		<li class="list-group-item"><a href="./music/16 - BL57_Sakkaku.mp3">BL57_Sakkaku.mp3</a></li>
+		<li class="list-group-item"><a href="./music/17 - 4BLM_101_Chokkaku.mp3">4BLM 101 Chokkaku.mp3</a></li>
+		<li class="list-group-item"><a href="./music/18%20-%20BL06_Sakkaku.mp3">BL06 Sakkaku.mp3</a></li>
+		<li class="list-group-item"><a href="./music/20%20-%20Fade%20To%20Black_B13a.mp3">Fade To Black B13a.mp3</a></li>
+		<li class="list-group-item"><a href="./music/21%20-%20What%20Can%20You%20See%20In%20Their%20Eyes.mp3">What Can You See In Their Eyes.mp3</a></li>
+		<li class="list-group-item"><a href="./music/22%20-%20Stand%20Up%20Be%20Strong(Part%20I).mp3">Stand Up Be String(Part I).mp3</a></li>
+	</ul>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+		crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+		crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+		crossorigin="anonymous"></script>
+
+<script src="../src/js/player.js"></script>
+
+</body>
+</html>
